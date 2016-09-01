@@ -8,11 +8,19 @@
 
 import Foundation
 
-class Cadastro {
+class Cadastro: NSObject, NSCoding {
     var lista: Array<Animal>!
     
-    init(){
+    override init(){
         self.lista = Array<Animal>()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.lista = aDecoder.decodeObjectForKey("lista") as! Array<Animal>
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(self.lista, forKey: "lista")
     }
     
     func add(sb: Animal) {

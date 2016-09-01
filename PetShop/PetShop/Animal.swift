@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Animal: NSObject {
+class Animal: NSObject, NSCoding{
     var nome:String!
     var proprietario:String!
     var telefone:String!
@@ -21,5 +21,17 @@ class Animal: NSObject {
         self.nome = nome
         self.proprietario = proprietario
         self.telefone = telefone
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.nome = aDecoder.decodeObjectForKey("nome") as! String
+        self.proprietario = aDecoder.decodeObjectForKey("proprietario") as! String
+        self.telefone = aDecoder.decodeObjectForKey("telefone") as! String
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(self.nome, forKey: "nome")
+        aCoder.encodeObject(self.proprietario, forKey: "proprietario")
+        aCoder.encodeObject(self.telefone, forKey: "telefone")
     }
 }

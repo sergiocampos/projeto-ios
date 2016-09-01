@@ -8,19 +8,51 @@
 
 import UIKit
 
-class ListarTableViewController: UITableViewController {
+class ListarTableViewController: UITableViewController{
     
-    let cadastro = Cadastro()
+    var cadastro = Cadastro()
+    
+    func path() -> String {
+        return NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0]
+    }
+    
+    func arquivo() -> String {
+        return "\(self.path())/arquivo"
+    }
+    
 
     // delegate (FormularioViewController)
     func salvar(an: Animal) {
         self.cadastro.add(an)
+        //print(self.arquivo())
+        NSKeyedArchiver.archiveRootObject(self.cadastro, toFile: self.arquivo())
+        tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        let obj = NSKeyedUnarchiver.unarchiveObjectWithFile(self.arquivo())
+        
+        if(obj != nil){
+            self.cadastro = obj as! Cadastro
+        }
+        else{
+            self.cadastro = Cadastro()
+        }
+        
+        func viewWillDisappear(animated: Bool){
+            
+            super.viewWillDisappear(true)
+            
+            
+            
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
