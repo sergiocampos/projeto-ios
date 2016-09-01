@@ -24,6 +24,7 @@
 /* Begin PBXFileReference section */
 		841352AA1D788718008F346E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		843D5CCC1D6794B800D5F4EE /* CelulaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelulaTableViewCell.swift; sourceTree = "<group>"; };
+		847064E41D78E28500EFBB1F /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		8496C8BB1D63AC2D0059614F /* PetShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8496C8BE1D63AC2D0059614F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8496C8C01D63AC2D0059614F /* FormularioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioViewController.swift; sourceTree = "<group>"; };
@@ -34,7 +35,7 @@
 		8496C8D31D63AF1D0059614F /* ListarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListarTableViewController.swift; sourceTree = "<group>"; };
 		8496C8D51D63B6690059614F /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		8496C8D71D63B6B80059614F /* Cadastro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cadastro.swift; sourceTree = "<group>"; };
-		8497E0551D78A941009A17D6 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		8497E0551D78A941009A17D6 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationSearchTable.swift; path = ../LocationSearchTable.swift; sourceTree = "<group>"; };
 		84E0E9F41D7617DF00EDBEF8 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,7 +53,6 @@
 		8496C8B21D63AC2D0059614F = {
 			isa = PBXGroup;
 			children = (
-				8497E0551D78A941009A17D6 /* LocationSearchTable.swift */,
 				8496C8BD1D63AC2D0059614F /* PetShop */,
 				8496C8BC1D63AC2D0059614F /* Products */,
 			);
@@ -101,10 +101,12 @@
 		8496C8D21D63AC740059614F /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				8497E0551D78A941009A17D6 /* LocationSearchTable.swift */,
 				8496C8C01D63AC2D0059614F /* FormularioViewController.swift */,
 				8496C8D31D63AF1D0059614F /* ListarTableViewController.swift */,
 				843D5CCC1D6794B800D5F4EE /* CelulaTableViewCell.swift */,
 				841352AA1D788718008F346E /* ViewController.swift */,
+				847064E41D78E28500EFBB1F /* Location.gpx */,
 			);
 			name = controller;
 			sourceTree = "<group>";
